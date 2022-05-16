@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "PT sans",sans-serif;
+}
+html {
+    background-color: #F1724D; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#F1724D, #F2BA52,#F5F7CF);
+}
+button{
+    background-color: #f4f0c4;
+    font-family: "PT Sans", sans-serif;
+    font-size:22px;
+    color:#028090;
+    height: 60px;
+    width: 160px;
+    border-radius:11px;
+    border:none;
+  }
+  
+  button:hover{
+    background-color: #028090;
+    color: #f4f0c4;
+  }
+  .container {
+  width: 97%;
+  margin: 0 auto;
+  }
+  
+  header {
+    background: #f1724d;
+  }
+  
+  header::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .logo { 
+    float: left;
+    padding: 10px 0;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 100px;
+    padding-right: 80px;
+    padding-top: 30px;
+    position: relative;
+  }
+  
+  nav a {
+    color: #f4f0c4; 
+    text-decoration:none; 
+    font-size: 22px;
+  }
+  
+  a:hover {
+    color: #028090; }
+.festival-date{
+    display: block;
+    margin-bottom: 2cm;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    color: #F5F7CF;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+.lineup{
+    text-align: center;
+    font-size: x-large;
+    background-color: #F5F7CF;
+    color: #028090;
+    margin-bottom: 3cm;
+    margin-left: 15cm;
+    margin-right: 15cm;
+    padding: 2cm;
+}
+#concert-photo{
+    height: 400px;
+}
+#attraction-photo{
+    height: 500px;
+}
+#food-photo{
+    height: 500px;
+}
+.attractions{
+    text-align: center;
+    font-size: x-large;
+    background-color: #F1724D;
+    color: #F2BA52;
+    margin-top: 3cm;
+    margin-bottom: 3cm;
+    margin-bottom: 3cm;
+    margin-left: 15cm;
+    margin-right: 15cm;
+    padding: 2cm;
+}
+.attractions a{
+    color: #F5F7CF;
+}
+.vendors{
+    text-align: center;
+    font-size: x-large;
+    background-color: #028090;
+    color: #F5F7CF;
+    
+    margin-top: 3cm;
+    margin-bottom: 3cm;
+    margin-left: 15cm;
+    margin-right: 15cm;
+    padding: 2cm;
+}
+.vendors a{
+    color: #F5F7CF;
+    text-decoration: none ;
+}
+.vendors a:hover{
+    color: #F5F7CF;
+    text-decoration: underline ;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+.footercontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+footer li {
+    display:inline-block;
+    position: relative;
+}
+footer a {
+    color: #028090; 
+    margin-left: 60px;
+    margin-right: 60px;
+    text-decoration:none; 
+    font-size: 16px;
+}
+  footer a:hover{
+    color:#F1724D;
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

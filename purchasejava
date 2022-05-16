@@ -1,0 +1,80 @@
+// grabbing an "address" or reference of object within HTML 
+const closeCart = document.getElementById('close-cart');
+const priceHandle = document.getElementById('totalPrice');
+
+
+closeCart.addEventListener('click', () => {
+    document.getElementById("cart118w").style.display = "none";
+});
+
+
+// get data for each item based on the price class
+// add a click event to each add to cart button for each product
+let otherArray = []
+let stuff = document.querySelectorAll(".price")
+stuff.forEach((element, index) => {
+     let theObject = {}
+     let name = element.parentNode.parentNode.children[1].innerHTML
+     let image =element.parentNode.parentNode.children[0].getAttribute("src")
+     let price = element.firstElementChild.innerHTML
+
+     theObject['productName'] = name;
+     theObject['price'] = price;
+     theObject['imageSrc'] = image;
+     /// add the click function to the add to cart button 
+     element.nextElementSibling.addEventListener("click", (e) => {
+          let objectId = e.target.getAttribute("data-id")
+          if(otherArray.indexOf(theObject) == -1){
+               otherArray.push(theObject) ;
+                addItem(theObject, objectId)
+          } 
+          event.preventDefault();
+     })
+     
+})
+// adds item to the table
+let addItem = (theObject, objectId) => {
+     theObject['id'] = objectId;
+     let tableRow = document.createElement("tr");
+     let tableData = document.createElement("td");
+     tableRow.innerHTML = 
+     `
+     <td><img src=${theObject.imageSrc} width="100%"/></td>
+     <td>${theObject.productName}</td>
+     <td>${theObject.price}</td>
+     <td>
+        <a href="#" class="remove" title="Remove from cart" data-id="${theObject.id}">X</a>
+    </td>
+     `
+
+     document.querySelectorAll("table#cart-content tbody")[0].appendChild(tableRow)
+     // activate delete item button
+     buttonActivator()
+     // show the cart
+     document.getElementById("cart118w").style.display = "block";
+
+// price calculation
+     var total = parseInt(priceHandle.innerHTML,0);
+     var price = parseInt(theObject.price.substring(1),0);
+     total = total + price;
+     priceHandle.innerHTML=total;
+}
+
+let buttonActivator = () => {
+     let removeButtons =  document.querySelectorAll(".remove")
+
+removeButtons.forEach(el => {
+     el.addEventListener("click", (e)=>{
+          let row = e.target.parentNode.parentNode;
+          document.querySelectorAll("table#cart-content tbody")[0].removeChild(row)
+          event.preventDefault();
+     })
+})
+
+}
+// clear cart
+document.querySelector("a#clear-cart").addEventListener("click", ()=>{
+     let rows = document.querySelectorAll("table#cart-content tbody")[0].childNodes
+     while(rows)
+          document.querySelectorAll("table#cart-content tbody")[0].removeChild(rows[0])  
+})

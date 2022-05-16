@@ -1,0 +1,198 @@
+body {
+    margin:0;
+    font-family: "PT Sans", sans-serif;
+    background: linear-gradient(#f18b59,#ffcc6c);
+  }
+  
+  button{
+    background-color: #f4f0c4;
+    font-family: "PT Sans", sans-serif;
+    font-size:22px;
+    color:#028090;
+    height: 60px;
+    width: 160px;
+    border-radius:11px;
+    border:none;
+  }
+  
+  button:hover{
+    background-color: #028090;
+    color: #f4f0c4;
+  }
+  .container {
+  width: 97%;
+  margin: 0 auto;
+  }
+  
+  header {
+    background: #f1724d;
+  }
+  
+  header::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .logo { 
+    float: left;
+    padding: 10px 0;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 100px;
+    padding-right: 80px;
+    padding-top: 30px;
+    position: relative;
+  }
+  
+  nav a {
+    color: #f4f0c4; 
+    text-decoration:none; 
+    font-size: 22px;
+  }
+  
+  a:hover {
+    color: #028090; }
+  
+  h1 {
+    text-align: center;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  h3 {
+    float:left;
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 24px;
+    color: #028090;
+  }
+  
+  footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding-top: 0px;
+    
+  }
+  
+  .footercontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  footer li {
+    display:inline-block;
+    position: relative;
+  }
+  
+  footer a {
+    color: #028090; 
+    margin-left: 60px;
+    margin-right: 60px;
+    text-decoration:none; 
+    font-size: 16px;
+  }
+  
+  footer a:hover{
+    color:#f4f0c4;
+  }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #028090;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #028090;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+
+  
+  input[type=submit] {
+    background-color: #028090;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+  input[type=submit]:hover {
+    background-color: #DD5B2A;
+  }
+  
+  
+  .container2 {
+    border-radius: 5px;
+    background-color: #02809000;
+    padding: 60px;
+    color: #028090;
+  }
+  
+
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+    color: #028090;
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
